@@ -1,0 +1,86 @@
+*{ /*toh ye teen cheej hame hamesa likhni hain 
+    phir aapka padding include ache se isse likhne main aapko dikkat nahi aage
+    box sizing border box se ye apne aap calculate karega sab kuch */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*star matlab sabhi elelmtnt main ye rules apply honge
+toh default margin nahi aage nahi hii default padding aage browser ka hisab se
+wrapper
+top aur bottom se 5px margin aur 100px left aur right se margin 
+toh width dii hamne jisse hamara box center ma aage
+aur margin left se auto diya aur margin right se bhi auto diya
+toh hamara box isse se bilkul centre main aage isse
+
+header
+
+toh container ka 20percent hain sidebar ki width 
+toh float ka use karna hain 2 column ka anadar 
+jab bhi aap banaoge
+content ko left karnege pahle float ka use karke 
+aur toh float left in content
+aur right sidebar main aapko float right ma set karna hain
+toh sidebar ka ander float right hoga 
+aur toh basically hamara content area gayab hoga float se
+toh iss dikkat ko resollve karne ka liye 
+
+container :: after ka andr ham code likhenege jisse float ki dikkat solve hogi
+min height inti rahege max ktini bhi hoga
+toh content dalne se ek dikakt aarahi hain
+toh ise resolve karenge padding ko content ka andar
+box sizing-border box define karna padega
+isse aapka content padding ma kaval content main hii set hoga
+box sizing se*/
+
+.wrapper{
+    border: solid black 5px;
+    min-height: 500px;
+    margin: 5px 100px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.header{
+    background-color: aquamarine;
+    height: 150px;
+}
+
+.main-nav{
+    background-color: cornflowerblue;
+    height: 40px;
+}
+
+.container{
+    border: solid 5px red;
+}
+
+.content{
+    background-color: darkorange;
+    min-height: 530px;
+    float: left;
+    padding: 10px;
+    width: 80%;
+    /* toh 20percent widht hamne sidebar ko dii toh 80percent width hamne content ko dene padege tabhi woh container ka andar poori space leaga*/
+}
+
+.sidebar{
+    background-color: darkturquoise;
+    min-height: 530px;
+    width: 20%;
+    float: right;
+}
+
+.container::after{ /* iss code se float ki dikkat solve hogi aur aapka sidebar right ma aagya container ka andar*/
+    content:" ";
+    display: block;
+    clear: both;
+    *zoom:1;
+}
+
+.footer{
+    background-color: darkslategray;
+    height: 40px;
+}

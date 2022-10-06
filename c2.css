@@ -1,0 +1,150 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;/*unnecessary padding nahi aane kiya */
+}
+
+body{
+    background-color: #b3b3b3;
+}
+
+.wrapper{
+  /*  border: solid black 5px;*/
+    margin: 10px 100px;
+
+}
+
+.header{
+    
+    background-color: white;
+}
+/*header ka andar h1 hain toh h1 ko aise likhna hain*/
+.header >h1{
+    font-family: cursive;/*cursive se font change ho gaya */
+    font-size: 70px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    color: #1E92DE;
+    text-shadow: 1px 1px tomato;
+}
+
+/*main nav ka andar ul ka andar */
+.main-nav > ul{
+    background-color: #292929;
+    list-style: none; /*list style none se bullet point gayab honge*/
+    padding-left: 30px;
+}
+
+.main-nav > ul >li{
+    display: inline-block; /*navigation baar ka elemetn ek line ma aayenege */
+    padding: 10px;
+}
+/*main nav ka andar ul ka andar li ka  andar a tag ka anadar jis element pa text likha hain usko aisa likhna hain*/
+
+.main-nav > ul > li > a{
+    color: white;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 25px;
+
+} 
+/*li ka andar hover effect dalega*/
+.main-nav > ul > li:hover{
+    background-color: #111111;
+
+
+}
+
+.main-nav > ul > li >a:hover{
+    background-color:red;
+
+}
+
+
+
+.content{
+    background-color: #fff;
+    min-height: 530px;
+    font-size: 50px;
+    padding: 20px;
+    width: 80%;
+
+    float:left; /*about us left ma aajegea , toh float se content hamara bhahr ja raha hain toh use resolve karegne*/
+}
+
+/*image ko set karne ka liye, center main lana ka liye  hamne margin left aur margin right ka use kara hain
+aur uski value auto dii , isse aapka image center main aage*/
+.content > img{
+    margin-left:auto;
+    margin-right: auto;
+    
+    display: block;
+    height: 600px;
+    
+    width: 70%; /*toh ya apana area ka 40 percent lega*/
+    padding-bottom:20px;
+    
+}
+
+.container > .content > p{
+    font-size: 40px;
+}
+
+.right-sidebar{
+    min-height: 300px;
+    width: 20%;
+    background-color: #fff;
+    float: right;
+    border-left:solid #b3b3b3 1px ;
+}
+
+
+
+.right-sidebar > h1{
+    font-family: cursive;
+    background-color: #1E92DE;
+    text-align: center;
+    font-size: 30px;
+    color:white;
+    padding: 5px;
+    margin-top:2px; /*about us jo hain wo thoda niche aage navigation baar se*/
+    border-top-right-radius: 20px; /*isse cornet ma aauyega aapka about us, matlan ek round as a corner generate hoga border radius se*/
+}
+ 
+.right-sidebar >p{
+   font-size: 45px;
+   min-height: 530px;
+   padding: 10px;
+
+}
+
+
+/*toh ye contetnt jo bhahr ja raha hain usko andar layenge aisa likhne se, container ka anadr sara text hain,*/
+
+.container::after{
+    content: " ";
+    display: block;
+    clear:both;
+    *zoom:1;
+}
+/*toh upar likhna jaruri hain isse aapka content bharh nahi jayega border se as it is likhna hain*/
+
+.footer{
+    background-color: black;
+    color:#fff;
+    padding:20px;
+    text-align: center;
+}
+
+.footer > a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 30px;
+    text-align: center;
+}
+
+/*toh hamne a pa hover effect lagaya aur jaise hii ispe cursor leke jayenge toh iska color change hoga*/
+.footer >a:hover{
+    color:thistle;
+}
